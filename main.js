@@ -22,3 +22,14 @@ function typeEffect() {
 
 // Call the typeEffect function when the page is loaded
 window.addEventListener("load", typeEffect);
+
+window.addEventListener('scroll', function() {
+  var navbar = document.getElementById('navbar');
+  var scrollPosition = window.scrollY;
+  
+  if (scrollPosition > 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});

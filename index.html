@@ -13,19 +13,18 @@
 </head>
 <body>
 <!-- Header -->
-    
   <header>
   <nav class="sticky-top" id="navbar">
       <div>
          <a class="navbar-brand text-white mx-2" id="navbar-a" href="#about">About Me</a>
+         <a class="navbar-brand text-white mx-2" href="#projects">Projects</a>
          <a class="navbar-brand text-white mx-2" href="#resume">Resume</a>
-         <a class="navbar-brand text-white mx-2" href="#portfolio">Portfolio</a>
          <a class="navbar-brand text-white mx-2" href="#github">GitHub</a>
          <a class="navbar-brand text-white mx-2" href="#itchio">itch.io</a>
          <a class="navbar-brand text-white mx-2" href="#linkedin">LinkedIn</a>
        </div>    
      </nav>
-  <img src="images/nasa.jpg" alt="Image">
+  <img src="images/mars.png" alt="Image">
     <h1 id="typing-header"></h1>
 
   </header>
@@ -33,10 +32,156 @@
   <!-- Main Content -->
   <main>
     <!-- About Me Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Your introduction and description of your skills and experience go here.</p>
-    </section>
+    <section id="about" class="about-section">
+    <h2 class="about-heading">About Me</h2>
+    <div class="about-container">
+        <div class="about-photo">
+            <img src="images/about.jpg" alt="Image">
+        </div>
+        <div class="about-details"> 
+            <h3 class="about-title">Hey, I'm Liliana</h3>
+            <h4 class="about-subtitle">Game developer | Unity</h4>
+            <hr class="about-divider"/>
+            <p class="about-description">Transitioning from psychology to software development for the last two years. I have acquired the necessary skills teaching myself by taking online courses and building personal projects. 
+Last year, I joined the "Jr. Unity developer" bootcamp to create video games using Unity and C#, discovering my passion for game development and virtual reality experiences. 
+I want to bring my skills and enthusiasm to a company where I can work on amazing projects.</p>
+        </div>
+     </div>
+      </section>
+
+
+      <!-- Projects Section -->
+      <section id="projects">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-category">
+      <h3 class="category-title">Prototypes and Game Jams</h3>
+     <div class="project-grid">
+      
+     <div class="project" data-title="Relics" 
+                          data-gif="images/combat.gif"
+                          data-description="3D Low poly Isometric rogue lite game.<br><a href='https://drive.google.com/file/d/1cCmRJhS1j7pUjYzzee0kHg4lYjtfc4lF/view?usp=sharing' target='_blank'>Game design document</a>.<br><a href='https://bayron-david.itch.io/beta-relics' target='_blank'>Check out game</a>" 
+                          data-role="UI/UX programmer, gameplay programmer, game designer, level designer"
+                          data-responsibilities="Develop the inventory system, Develop the environmental damage"
+                          data-github="https://github.com/ligomezm/G7FinalProject/blob/dev/Assets/Scripts/Inventory/Inventory.cs"
+                          style="background-image: url('images/relics.png') ; background-size: cover;">
+       <h4 class="project-title">Relics</h4>  
+       <div class="project-overlay">  
+         <p class="project-overlay-text">Role: UI/UX programmer, gameplay programmer, game designer, level designer</p>
+         <div class="project-button-container">
+           <button class="project-button">More Info</button>
+         </div>
+        </div>
+     </div>
+
+     <div class="project"  data-title="Into the forest"
+                           data-gif=""
+                           data-description="3D survival game."
+                           data-role="UI/UX programmer,level designer"
+                           data-responsibilities="Set the scene, Develop the environmental damage"
+                           style="background-image: url('images/forest.png'); background-size: cover;">
+       <h4 class="project-title">Into the forest</h4>  
+       <div class="project-overlay">  
+         <p class="project-overlay-text">Role: UI/UX programmer, gameplay programmer, game designer, level designer</p>
+         <div class="project-button-container">
+           <button class="project-button">More Info</button>
+         </div>
+        </div>
+     </div>
+
+     <div class="project" data-title="No way back"
+                           data-gif=""
+                           data-description="Hoverboard controller developed using Unity physics, inspired by the movie back to future"
+                           data-role="gameplay programmer"
+                           data-responsibilities="esta es una prueba, esta es una prueba2"
+                           style="background-image: url('images/back.png'); background-size: cover;">
+       <h4 class="project-title">No way back</h4>  
+       <div class="project-overlay">  
+         <p class="project-overlay-text">Role: UI/UX programmer, gameplay programmer, game designer, level designer</p>
+         <div class="project-button-container">
+           <button class="project-button">More Info</button>
+         </div>
+        </div>
+     </div>
+
+     <div class="project" data-title="Cherry rush"
+                          data-gif=""
+                          data-description="Single-player platformer RPG game about a Hawaiian god who collects cherries"
+                          data-role="gameplay tester"
+                          data-responsibilities="esta es otra prueba, esta es otra prueba2"
+     style="background-image: url('images/cherry.png'); background-size: cover;">
+       <h4 class="project-title">Cherry rush</h4>  
+       <div class="project-overlay">  
+         <p class="project-overlay-text">Role: UI/UX programmer, gameplay programmer, game designer, level designer</p>
+         <div class="project-button-container">
+           <button class="project-button">More Info</button>
+         </div>
+        </div>
+     </div>
+      
+
+      <!-- Add more project items here -->
+     </div>
+  </div>
+
+  <div class="project-category">
+    <h3 class="category-title">Personal Projects</h3>
+
+    <div class="project-grid">
+
+    <div class="project" style="background-image: url('images/angry.png'); background-size: cover;">
+       <h4 class="project-title">Angry birds clone</h4>  
+       <div class="project-overlay">  
+         <p class="project-overlay-text">Role: UI/UX programmer, gameplay programmer, game designer, level designer</p>
+         <div class="project-button-container">
+           <button class="project-button">More Info</button>
+         </div>
+        </div>
+     </div>
+
+
+      <div class="project">
+        <h4 class="project-title">VFX</h4>
+        <div class="project-description">Description of the project goes here.</div>
+        <div class="project-role">Role: Sound Designer</div>
+        <button class="project-button">More Info</button>
+      </div>
+
+      <!-- Add more project items here -->
+    </div>
+  </div>
+</section>
+
+<div class="modal-container" id="modal-container">
+    <div class="modal-content">
+      <h4 class="modal-title"></h4>
+      <p class="modal-divider"></p>
+      <div class="modal-section">
+      <div class="modal-gif-container">
+        <img src="" alt="GIF" class="modal-gif">
+      </div>
+      <h3 class="modal-section-title">Description</h3>
+      <p class="modal-section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat enim ut augue facilisis, sed dapibus massa consectetur.</p>
+    </div>
+    <div class="modal-section">
+      <h3 class="modal-section-title">Role</h3>
+      <p class="modal-role">Soy <strong>Desarrollador</strong> en este proyecto.</p>
+    </div>
+    <div class="modal-section">
+      <h3 class="modal-section-title">Responsibilities</h3>
+      <ul class="modal-section-list" id="modal-responsibilities">
+        <li>Responsabilidad 1</li>
+        <li>Responsabilidad 2</li>
+        <li>Responsabilidad 3</li>
+      </ul>
+    </div>
+    <div class="modal-buttons">
+      <button class="modal-button modal-github">Script Fragment</button>
+      <button class="modal-close">Cerrar</button>
+    </div>
+  </div>
+</div>
+
 
     <!-- Resume Section -->
     <section id="resume">
@@ -44,17 +189,6 @@
       <p>Your resume or a summary of your qualifications can be placed here.</p>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="project">
-        <h3>Project Title</h3>
-        <p>Description of what you did and what the game is about.</p>
-        <p>Challenges faced during development.</p>
-        <p>Links to access the project/game.</p>
-      </div>
-      <!-- Add more projects here -->
-    </section>
 
     <!-- GitHub Section -->
     <section id="github">

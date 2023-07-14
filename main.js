@@ -54,7 +54,7 @@ projectButtons.forEach((button) => {
     const gifUrl = project.dataset.gif;
     const description = project.getAttribute('data-description');
     const role = project.getAttribute('data-role');
-    const responsibilities = project.getAttribute('data-responsibilities').split(',');
+    const responsibilities = project.getAttribute('data-responsibilities').split(';');
    
     githubLink = project.getAttribute('data-github');
 
@@ -100,8 +100,11 @@ projectButtons.forEach((button) => {
 });
 
 // Function to highlight specified words in a string
-function highlightWords(text) {
-  const keywords = ["INVENTORY", "SYSTEM", "keyword3"]; // List of words to highlight
+function highlightWords(text) { 
+  const keywords = ["INVENTORY", "SYSTEM", "COLLECTIBLES", "FEEDBACK SYSTEM", "UI/UX", "MINI MAP", "BATTERY INDICATOR", "SFX", 
+                   "INTERACTION", "NPCs", "ANIMATION", "game design document", "DEBUGGED", "GAMEPLAY", "HAZARDS", "INTERACTIVE ELEMENTS",
+                   "LEVEL DESIGN", "SETTING UP", "ENVIRONMENTAL DAMAGE", "MECHANICS", "PLAYTESTING"
+                   ]; // List of words to highlight
 
   keywords.forEach((keyword) => {
     const regex = new RegExp(keyword, "gi");

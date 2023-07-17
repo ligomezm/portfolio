@@ -44,8 +44,23 @@ const modalRole = modalContainer.querySelector('.modal-role');
 const modalResponsibilities = modalContainer.querySelector('.modal-section-list');
 const modalGithub = modalContainer.querySelector('.modal-github');
 const modalClose = modalContainer.querySelector('.modal-close');
+const modalContent = modalContainer.querySelector('.modal-content');
 
 let githubLink;
+
+// Function to open the modal container
+function openModal() {
+  modalContainer.style.display = 'flex';
+  modalContent.scrollTo(0, 0);
+
+  //document.body.style.overflow = 'hidden';
+}
+
+// Function to close the modal container
+function closeModal() {
+  modalContainer.style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
 
 projectButtons.forEach((button) => {
   button.addEventListener('click', (event) => {
@@ -75,7 +90,7 @@ projectButtons.forEach((button) => {
       modalResponsibilities.appendChild(listItem);
     });
 
-    modalContainer.style.display = 'flex';
+    openModal();
   });
 });
 
@@ -85,14 +100,9 @@ modalGithub.addEventListener('click', () => {
 });
 
 // Agrega un controlador de eventos para cerrar la ventana emergente
-modalClose.addEventListener('click', () => {
-  modalContainer.style.display = 'none';
-});
+modalClose.addEventListener('click', closeModal);
 
-// Function to open the modal container
-function openModal() {
-  modalContainer.style.display = 'flex';
-}
+
 
 // Event listener for the "More Info" button
 projectButtons.forEach((button) => {
@@ -102,8 +112,8 @@ projectButtons.forEach((button) => {
 // Function to highlight specified words in a string
 function highlightWords(text) { 
   const keywords = ["INVENTORY", "SYSTEM", "COLLECTIBLES", "FEEDBACK SYSTEM", "UI/UX", "MINI MAP", "BATTERY INDICATOR", "SFX", 
-                   "INTERACTION", "NPCs", "ANIMATION", "game design document", "DEBUGGED", "GAMEPLAY", "HAZARDS", "INTERACTIVE ELEMENTS",
-                   "LEVEL DESIGN", "SETTING UP", "ENVIRONMENTAL DAMAGE", "MECHANICS", "PLAYTESTING"
+                   "INTERACTION", "NPCs", "animations", "ANIMATION", "game design document", "DEBUGGED", "GAMEPLAY", "HAZARDS", "INTERACTIVE ELEMENTS",
+                   "LEVEL DESIGN", "SETTING UP", "ENVIRONMENTAL DAMAGE", "MECHANICS", "PLAYTESTING", "menu", "behaviour"
                    ]; // List of words to highlight
 
   keywords.forEach((keyword) => {

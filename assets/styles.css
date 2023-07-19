@@ -183,6 +183,7 @@ section {
 
 .about-title {
   font-weight: bold;
+  margin-top: 25px;
 }
 
 .about-subtitle {
@@ -241,6 +242,7 @@ section {
   transition: opacity 0.3s;
   z-index: 1;
   border: none;
+  border-radius: 6px;
 
 }
 
@@ -284,6 +286,7 @@ section {
   background-color: rgba(0, 0, 0, 0.6);
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
+  border-radius: 6px;
   }
 
 

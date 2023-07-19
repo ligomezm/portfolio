@@ -2,7 +2,7 @@
 const text = "Hey! Thanks for visiting my portfolio";
 
 // Delay between each letter (in milliseconds)
-const delay = 100;
+const delay = 60;
 
 // Function to perform the typing animation
 function typeEffect() {

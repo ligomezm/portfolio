@@ -1,5 +1,5 @@
 // Text for the typing animation
-const text = "Hey! Thanks for visiting my portfolio";
+const text = "Hey, thanks for visiting my portfolio";
 
 // Delay between each letter (in milliseconds)
 const delay = 60;
@@ -34,7 +34,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Agrega un controlador de eventos para abrir la ventana emergente
+// Add event listener to  open the pop-up window
 const projectButtons = document.querySelectorAll('.project-button');
 const modalContainer = document.getElementById('modal-container');
 const modalTitle = modalContainer.querySelector('.modal-title');
@@ -94,12 +94,12 @@ projectButtons.forEach((button) => {
   });
 });
 
-// Agrega un controlador de eventos para abrir el enlace de GitHub
+// Add event listener to open GitHub link
 modalGithub.addEventListener('click', () => {
   window.open(githubLink, '_blank');
 });
 
-// Agrega un controlador de eventos para cerrar la ventana emergente
+// Add event listener to close the pop-up window
 modalClose.addEventListener('click', closeModal);
 
 

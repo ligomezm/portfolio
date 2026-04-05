@@ -52,6 +52,7 @@ let githubLink;
 function openModal() {
   modalContainer.style.display = 'flex';
   modalContent.scrollTo(0, 0);
+  document.body.style.overflow = 'hidden'; // Block scroll in background
 
   //document.body.style.overflow = 'hidden';
 }
@@ -103,7 +104,12 @@ modalGithub.addEventListener('click', () => {
 // Add event listener to close the pop-up window
 modalClose.addEventListener('click', closeModal);
 
-
+// Add event listener to close the pop-up window with ESC
+document.addEventListener('keydown', (event) => {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
 
 // Event listener for the "More Info" button
 projectButtons.forEach((button) => {
@@ -125,4 +131,8 @@ function highlightWords(text) {
 
   return text;
 }
+
+
+
+
 

@@ -35,26 +35,25 @@ window.addEventListener('scroll', function() {
 });
 
 // Add event listener to  open the pop-up window
-const projectButtons = document.querySelectorAll('.project-button');
+const projectButtons = document.querySelectorAll('.project-button'); 
 const modalContainer = document.getElementById('modal-container');
+const modalContent = modalContainer.querySelector('.modal-content'); 
+const carouselInner = document.getElementById('carousel-images');
+const carouselElement = document.getElementById('projectCarousel');
 const modalTitle = modalContainer.querySelector('.modal-title');
-const modalGif = modalContainer.querySelector('.modal-gif');
 const modalDescription = modalContainer.querySelector('.modal-section-content');
 const modalRole = modalContainer.querySelector('.modal-role');
-const modalResponsibilities = modalContainer.querySelector('.modal-section-list');
+const modalResponsibilities = document.getElementById('modal-responsibilities');
 const modalGithub = modalContainer.querySelector('.modal-github');
-const modalClose = modalContainer.querySelector('.modal-close');
-const modalContent = modalContainer.querySelector('.modal-content');
+const modalClose = modalContainer.querySelector('.modal-close'); 
 
 let githubLink;
 
 // Function to open the modal container
 function openModal() {
   modalContainer.style.display = 'flex';
-  modalContent.scrollTo(0, 0);
-  document.body.style.overflow = 'hidden'; // Block scroll in background
-
-  //document.body.style.overflow = 'hidden';
+  if (modalContent) modalContent.scrollTo(0, 0); // Verificación de seguridad
+  document.body.style.overflow = 'hidden';
 }
 
 // Function to close the modal container
@@ -66,31 +65,46 @@ function closeModal() {
 projectButtons.forEach((button) => {
   button.addEventListener('click', (event) => {
     const project = event.target.closest('.project');
-    const title = project.querySelector('.project-title').textContent;
-    const gifUrl = project.dataset.gif;
-    modalGif.src = "";
-    const description = project.getAttribute('data-description');
-    const role = project.getAttribute('data-role');
-    const responsibilities = project.getAttribute('data-responsibilities').split(';');
-   
+    
+    // 1. Basic Texts
+    modalTitle.textContent = project.dataset.title || project.querySelector('.project-title').textContent;
+    modalDescription.innerHTML = project.getAttribute('data-description');
+    modalRole.textContent = project.getAttribute('data-role');
+    
     githubLink = project.getAttribute('data-github');
-
-    modalTitle.textContent = title;
-    modalGif.src = gifUrl;
-    modalDescription.innerHTML = description;
-    modalRole.textContent = role;
-
-    // Clear existing responsibilities list
-    while (modalResponsibilities.firstChild) {
-      modalResponsibilities.firstChild.remove();
+    if (githubLink) {
+        modalGithub.style.display = 'inline-block';
+    } else {
+        modalGithub.style.display = 'none';
     }
 
-    // Create list items for responsibilities
-    responsibilities.forEach((responsibility) => {
-      const listItem = document.createElement('li');
-      listItem.innerHTML = highlightWords(responsibility);
-      modalResponsibilities.appendChild(listItem);
+    // 2. GIFs Carousel 
+    const rawGifs = project.dataset.gif || "";
+    const gifUrls = rawGifs.split(',').map(url => url.trim());
+    
+    carouselInner.innerHTML = ''; 
+    gifUrls.forEach((url, index) => {
+      const item = document.createElement('div');
+      item.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+      item.innerHTML = `<img src="${url}" class="d-block w-100 modal-gif" style="object-fit: contain; max-height: 400px; background: #000;">`;
+      carouselInner.appendChild(item);
     });
+
+    const controls = carouselElement.querySelectorAll('.carousel-control-prev, .carousel-control-next');
+    controls.forEach(c => c.style.display = gifUrls.length > 1 ? 'flex' : 'none');
+
+    const respData = project.getAttribute('data-responsibilities');
+    if (respData) {
+        const respArray = respData.split(';');
+        modalResponsibilities.innerHTML = '';
+        respArray.forEach((resp) => {
+            if (resp.trim()) {
+                const li = document.createElement('li');
+                li.innerHTML = highlightWords(resp);
+                modalResponsibilities.appendChild(li);
+            }
+        });
+    }
 
     openModal();
   });
@@ -117,12 +131,12 @@ projectButtons.forEach((button) => {
 });
 
 // Function to highlight specified words in a string
-function highlightWords(text) { 
-  const keywords = ["INVENTORY", "SYSTEMS", "SYSTEM", "COLLECTIBLES", "FEEDBACK SYSTEM", "UI/UX", "MINI MAP", "BATTERY INDICATOR", "SFX", 
-                   "INTERACTION", "NPCs", "animations", "ANIMATION", "game design document", "DEBUGGED", "GAMEPLAY", "HAZARDS", "INTERACTIVE ELEMENTS",
-                   "LEVEL DESIGN", "SETTING UP", "ENVIRONMENTAL DAMAGE", "MECHANICS", "PLAYTESTING", "menu", "behaviour", "codebases", "APIs", "XBOX", 
-                   "STEAM", "ITERATION", "TESTING"
-                   ]; // List of words to highlight
+function highlightWords(text) {
+  const keywords = ["INVENTORY", "SYSTEMS", "SYSTEM", "COLLECTIBLES", "FEEDBACK SYSTEM", "UI/UX", "MINI MAP", "BATTERY INDICATOR", "SFX",
+    "INTERACTION", "NPCs", "animations", "ANIMATION", "game design document", "DEBUGGED", "GAMEPLAY", "HAZARDS", "INTERACTIVE ELEMENTS",
+    "LEVEL DESIGN", "SETTING UP", "ENVIRONMENTAL DAMAGE", "MECHANICS", "PLAYTESTING", "menu", "behaviour", "codebases", "APIs", "XBOX",
+    "STEAM", "ITERATION", "TESTING"
+  ]; // List of words to highlight
 
   keywords.forEach((keyword) => {
     const regex = new RegExp(keyword, "gi");

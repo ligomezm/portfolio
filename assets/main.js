@@ -135,7 +135,7 @@ function highlightWords(text) {
   const keywords = ["INVENTORY", "SYSTEMS", "SYSTEM", "COLLECTIBLES", "FEEDBACK SYSTEM", "UI/UX", "MINI MAP", "BATTERY INDICATOR", "SFX",
     "INTERACTION", "NPCs", "animations", "ANIMATION", "game design document", "DEBUGGED", "GAMEPLAY", "HAZARDS", "INTERACTIVE ELEMENTS",
     "LEVEL DESIGN", "SETTING UP", "ENVIRONMENTAL DAMAGE", "MECHANICS", "PLAYTESTING", "menu", "behaviour", "codebases", "APIs", "XBOX",
-    "STEAM", "ITERATION", "TESTING"
+    "STEAM", "ITERATION", "TESTING", "light baking", "post-processing", "VFX", "PERFORMANCE"
   ]; // List of words to highlight
 
   keywords.forEach((keyword) => {

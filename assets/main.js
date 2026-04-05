@@ -67,6 +67,7 @@ projectButtons.forEach((button) => {
     const project = event.target.closest('.project');
     const title = project.querySelector('.project-title').textContent;
     const gifUrl = project.dataset.gif;
+    modalGif.src = "";
     const description = project.getAttribute('data-description');
     const role = project.getAttribute('data-role');
     const responsibilities = project.getAttribute('data-responsibilities').split(';');
@@ -111,9 +112,10 @@ projectButtons.forEach((button) => {
 
 // Function to highlight specified words in a string
 function highlightWords(text) { 
-  const keywords = ["INVENTORY", "SYSTEM", "COLLECTIBLES", "FEEDBACK SYSTEM", "UI/UX", "MINI MAP", "BATTERY INDICATOR", "SFX", 
+  const keywords = ["INVENTORY", "SYSTEMS", "SYSTEM", "COLLECTIBLES", "FEEDBACK SYSTEM", "UI/UX", "MINI MAP", "BATTERY INDICATOR", "SFX", 
                    "INTERACTION", "NPCs", "animations", "ANIMATION", "game design document", "DEBUGGED", "GAMEPLAY", "HAZARDS", "INTERACTIVE ELEMENTS",
-                   "LEVEL DESIGN", "SETTING UP", "ENVIRONMENTAL DAMAGE", "MECHANICS", "PLAYTESTING", "menu", "behaviour"
+                   "LEVEL DESIGN", "SETTING UP", "ENVIRONMENTAL DAMAGE", "MECHANICS", "PLAYTESTING", "menu", "behaviour", "codebases", "APIs", "XBOX", 
+                   "STEAM", "ITERATION", "TESTING"
                    ]; // List of words to highlight
 
   keywords.forEach((keyword) => {

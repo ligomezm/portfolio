@@ -1,330 +1,166 @@
 ﻿<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Developer Portfolio</title>
-  <script src="assets/main.js" defer></script>
-  <link rel="stylesheet" href="assets/styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liliana Gomez — Game Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
 </head>
-
 <body>
-  <!-- Header -->
-  <header>
-    <nav class="sticky-top" id="navbar">
-      <div>
-        <a class="navbar-brand text-white mx-2" id="navbar-a" href="#about">About Me</a>
-        <a class="navbar-brand text-white mx-2" href="#projects">Projects</a>
-        <a class="navbar-brand text-white mx-2" href="#skills">Skills</a>
-        <a class="navbar-brand text-white mx-2" href="#contact">Contact</a>
-      </div>
-    </nav>
-    <img src="images/mars.png" alt="Image">
-    <h1 id="typing-header"></h1>
-  </header>
+<header class="nav"><div class="wrap"><div class="nav-inner">
+  <a href="#top" class="brand"><span class="dot"></span>Liliana Gomez</a>
+  <nav class="nav-links">
+    <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </nav>
+  <button class="menu-btn" id="openMenu" aria-label="Open menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+  </button>
+</div></div></header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- About Me Section -->
-    <section id="about" class="about-section">
-      <h2 class="about-heading">About Me</h2>
-      <div class="about-container">
-        <div class="about-photo">
-          <img src="images/about.png" alt="Image">
-        </div>
-        <div class="about-details">
-          <h3 class="about-title">I'm Liliana</h3>
-          <h4 class="about-subtitle">Self-taught Game Developer with a background in Psychology</h4>
-          <hr class="about-divider" />
-          <p class="about-description">I taught myself programming and Unity, and later completed an Associate's Degree
-            in Software Development. I got into the game industry in October 2023, driven by how much I genuinely enjoy
-            making games.
-            <br><br>Since then, I've been working on SOPA - Tale of the Stolen Potato as a Gameplay Developer and
-            Lighting Artist. The game launched in 2025 on Xbox and Steam, and I'm now continuing work on its sequel.
-            <br><br>These days, I use AI tools, including agent-based workflows to speed up my process, prototype ideas
-            faster, and keep improving how I work.
-            <br><br>I also come from a Psychology background, which really helps me communicate and collaborate better
-            with teams. I am particularly interested in games with an educational purpose and those that incorporate
-            rich narratives and outstanding artwork.
-          </p>
-        </div>
-      </div>
-    </section>
+<nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <button class="mm-close" id="closeMenu" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+  </button>
+  <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+</nav>
 
-     <!-- Projects Section -->
-    <section id="projects">
-      <h2 class="section-title">Projects</h2>
-
-      <!-- Shipped Games -->
-      <div class="project-category">
-        <h3 class="category-title">Shipped Games</h3>
-        <div class="project-grid">
-          <div class="project" data-title="SOPA - Tale of the Stolen Potato"
-            data-gif="images/gifs/sopa_1.gif, images/gifs/sopa_2.gif, images/gifs/sopa_3.gif, images/gifs/sopa_4.gif, images/gifs/sopa_5.gif"
-            data-description="Narrative-driven adventure game with rich storytelling and stylized visuals, released on Xbox and Steam in 2025.
-                                             <br><a href='https://store.steampowered.com/app/1935330/SOPA__Tale_of_the_Stolen_Potato/' target='_blank'>View on Steam</a>
-                                             <a href='https://www.xbox.com/en-US/games/store/sopa-tale-of-the-stolen-potato/9N221ZTFGQB0?msockid=37dc7996f79066050a2f765af65567e3' target='_blank'>View on Xbox</a>"
-            data-role="Gameplay Developer, Lighting Artist" data-responsibilities="Contributed to core gameplay systems and production pipeline.;
-                                                   Expanded and maintained existing codebases, tools, and proprietary APIs.;
-                                                   Implemented gameplay-driven animations and interactive features.;
-                                                   Developed intuitive systems focused on player experience.;
-                                                   Owned the end-to-end visual polish: light baking, custom post-processing and VFX to create high-fidelity environments while maintaining performance stability.;
-                                                   Performed testing, debugging, and iteration in a production environment.;
-                                                   Contributed to the successful release on Xbox and Steam (2025)."
-            style="background-image: url('images/sopa.png'); background-size: cover;">
-            <h4 class="project-title">SOPA - Tale of the Stolen Potato</h4>
-            <div class="project-overlay">
-              <p class="project-overlay-text">Role: Gameplay Developer, Lighting Artist</p>
-              <div class="project-button-container">
-                <button class="project-button">More Info</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Prototypes and Game Jams -->
-      <div class="project-category">
-        <h3 class="category-title">Prototypes and Game Jams</h3>
-        <div class="project-grid">
-          <div class="project" data-title="Relics" data-gif="images/gifs/combat.gif"
-            data-description="3D low-poly isometric roguelite game, where the player embodies a retired archaeologist who enters a trance state after interacting with some of his relics, displaying a whole different time period.
-                                             <br><a href='https://drive.google.com/file/d/1cCmRJhS1j7pUjYzzee0kHg4lYjtfc4lF/view?usp=sharing' target='_blank'>Game design document</a>. 
-                                             <br><a href='https://bayron-david.itch.io/beta-relics' target='_blank'>Check out game</a>"
-            data-role="UI/UX programmer, generalist programmer, game designer, level designer" data-responsibilities="Developed the inventory and collectibles system.;
-                                                   Integrated the collectibles animation and SFX.;
-                                                   Designed and developed UI/UX across different canvases.;
-                                                   Implemented a feedback system for the player's actions and progress.;
-                                                   Designed and programmed the interaction system and non-playable characters (NPCs).;
-                                                   Created the game design document outlining the project's vision and mechanics.;
-                                                   Worked on level design, including setting up scenes and environments.;
-                                                   Animated and programmed environmental damage and traps.;
-                                                   Debugged and fixed issues reported during playtesting."
-            data-github="https://github.com/ligomezm/G7FinalProject/blob/dev/Assets/Scripts/Inventory/Inventory.cs"
-            style="background-image: url('images/relics.png') ; background-size: cover;">
-            <h4 class="project-title">Relics</h4>
-            <div class="project-overlay">
-              <p class="project-overlay-text">Role: UI/UX programmer, generalist programmer, game designer, level designer</p>
-              <div class="project-button-container">
-                <button class="project-button">More Info</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="project" data-title="Into the forest" data-gif="images/gifs/forest.gif"
-            data-description="3D survival single-player game in first-person about an ex-combatant (Dominique) who lately escaped from the militia and now is hiding himself in one of the coldest and most dangerous forests in the world.
-                                             <br><a href='https://drive.google.com/file/d/1DLuKwIsKwiwJAWHi_T7KSv_dw0XsrTfz/view?usp=sharing' target='_blank'>Game design document</a>
-                                             <br><a href='https://ligomezm.itch.io/into-the-forest' target='_blank'>Check out game</a>"
-            data-role="UI/UX programmer, gameplay programmer, animator, game designer" data-responsibilities="Designed and developed UI/UX elements such as the health bar, counter, game over and win screens, and menus.;
-                                                   Developed the attack tree chopping mechanics.;
-                                                   Worked on enemy mechanics.;
-                                                   Worked on character animation using Mixamo.;
-                                                   Setting up scene and environment.;
-                                                   Integrated sound effects (SFX) and music into the project."
-            data-github="https://github.com/ligomezm/IntoTheForestVideoGame/blob/main/Proyecto%202nd%20Jam/Assets/Scripts/PlayerHealth.cs"
-            style="background-image: url('images/forest.png'); background-size: cover;">
-            <h4 class="project-title">Into the forest</h4>
-            <div class="project-overlay">
-              <p class="project-overlay-text">Role: UI/UX programmer, gameplay programmer, animator, game designer</p>
-              <div class="project-button-container">
-                <button class="project-button">More Info</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="project" data-title="No way back" data-gif="images/gifs/hoverboard.gif"
-            data-description="Hoverboard controller/simulation developed using Unity physics and C# for the two days game jam hosted by Generation in the Bootcamp Jr. Unity Developer. Inspired by the movie back to future.
-                                             <br><br>  Features included:<br>
-                                             <ul>
-                                             <li>Fly over the ground and react to the height of the ground</li>
-                                             <li>Speed up and Rest</li>
-                                             <li>Battery indicator</li>
-                                             <li>Mini map</li>
-                                             </ul>
-                                             <a href='https://ligomezm.itch.io/no-way-back' target='_blank'>Check out game</a>" data-role="Generalist, programmer, UI/UX designer."
-            data-responsibilities="Designed and developed UI/UX for the project.;
-                                                   Developed the battery indicator feature with 3D hoverboard animated on it.;
-                                                   Created and implemented the mini map functionality.;
-                                                   Worked on the integration of SFX (sound effects) and music."
-            data-github="https://github.com/ligomezm/NoWayBackVideoGame/blob/main/Assets/Scripts/EnergyBar.cs"
-            style="background-image: url('images/back.png'); background-size: cover;">
-            <h4 class="project-title">No way back</h4>
-            <div class="project-overlay">
-              <p class="project-overlay-text">Role: Generalist, programmer, UI/UX designer.</p>
-              <div class="project-button-container">
-                <button class="project-button">More Info</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="project" data-title="Cherry rush" data-gif="images/gifs/cherry.gif"
-            data-description="2D Single-player platformer RPG game about a Hawaiian god who collects cherries.
-                                           <br><a href='https://drive.google.com/file/d/1iGhOvZ4Hrkxiwe_QjHFGp-lhm0VMl8Jj/view?usp=sharing' target='_blank'>Game design document</a>
-                                           <br><a href='https://ligomezm.itch.io/cherry-rush' target='_blank'>Check out game</a>" data-role="Generalist programmer, animator, game designer"
-            data-responsibilities="Worked on the core gameplay mechanics, such as player movement, jumping, and collision detection.;
-                                                   Programmed interactive elements, including platforms, collectibles, and hazards.;
-                                                   Implemented game mechanics related to scoring, progression, and level unlocking.;
-                                                   Integrated sound effects (SFX) and music.;
-                                                   Debugged and fixed issues reported during playtesting to ensure a smooth experience.;
-                                                   Collaborated on the game design document outlining the project's vision and mechanics."
-            data-github="https://github.com/ligomezm/CherryRushVideoGame/blob/main/Assets/Scripts/Finish.cs"
-            style="background-image: url('images/cherry.png'); background-size: cover;">
-            <h4 class="project-title">Cherry rush</h4>
-            <div class="project-overlay">
-              <p class="project-overlay-text">Role: Generalist programmer, animator</p>
-              <div class="project-button-container">
-                <button class="project-button">More Info</button>
-              </div>
-            </div>
-          </div>
-          <!-- Add more project items here -->
-        </div>
-      </div>
-
-      <div class="project-category">
-        <h3 class="category-title">Personal Projects</h3>
-        <div class="project-grid">
-          <div class="project" data-title="Angry birds - clone" data-gif="images/gifs/explosion.gif"
-            data-description="This is a clone of the popular mobile game Angry Birds, with some extra functionalities added to make the gameplay more interesting that works on mobile and pc. 
-                                           <br><br>Assets taken from https://angrybirds.fandom.com/
-                                           <br><br><a href='https://play.unity.com/mg/other/angry-birds-clone-webgl' target='_blank'>Check out game</a>" data-role="Generalist developer" data-responsibilities="Created a character selection menu allowing players to choose their preferred bird.;
-                                                 Implemented explosion and split mechanics, as well as the slingshot behaviour using line renderers.;
-                                                 Developed 2D animations for characters.;
-                                                 Implemented a scoring system to track and display the player's performance.;
-                                                 Added sound effects (SFX) and background music."
-            data-github="https://github.com/ligomezm/Angry-Birds-clone/blob/master/Assets/Scripts/BirdMechanics/Explosion.cs"
-            style="background-image: url('images/birds2.png'); background-size: cover;">
-            <h4 class="project-title">Angry birds clone</h4>
-            <div class="project-overlay">
-              <p class="project-overlay-text">Role: Generalist developer</p>
-              <div class="project-button-container">
-                <button class="project-button">More Info</button>
-              </div>
-            </div>
-          </div>
-          <!-- Add more project items here -->
-        </div>
-      </div>
-    </section>
-
-    <div class="modal-container" id="modal-container">
-      <div class="modal-content">
-        <h4 class="modal-title"></h4>
-        <p class="modal-divider"></p>
-
-        <div class="modal-section">
-          <div id="projectCarousel" class="carousel slide">
-            <div class="carousel-inner" id="carousel-images">
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
-          </div>
-
-          <h3 class="modal-section-title">Description</h3>
-          <p class="modal-section-content"></p>
-        </div>
-
-        <div class="modal-section">
-          <h3 class="modal-section-title">Role</h3>
-          <p class="modal-role"></p>
-        </div>
-
-        <div class="modal-section">
-          <h3 class="modal-section-title">Responsibilities</h3>
-          <ul class="modal-section-list" id="modal-responsibilities"></ul>
-        </div>
-
-        <div class="modal-buttons">
-          <button class="modal-button modal-github">Script Fragment</button>
-          <button class="modal-close">Cerrar</button>
-        </div>
+<a id="top"></a>
+<section class="hero" id="hero">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="field-glow"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Based in Brisbane, Australia · Open to remote work</span>
+      <h1>I build games with <span class="grad">soul &amp; warmth</span>.</h1>
+      <div class="role"><span class="pulse"></span>Game Developer &amp; Lighting Artist</div>
+      <p class="lede">I craft experienced through story, art and light that stay with you long after the screen goes dark.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View my work
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
       </div>
     </div>
+  </div>
+</section>
 
-    <section id="skills">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-section">
-        <div class="skill">
-          <img src="images/icons/forest.png" alt="Forest logo">
-          <span class="text">AI Agents/ LLM Platforms/ GenAI</span>
-        </div>
-        <div class="skill">
-          <img src="images/icons/unity.png" alt="Unity logo">
-          <span class="text">Unity</span>
-        </div>
-        <div class="skill">
-          <img src="images/icons/c-sharp.png" alt="C Sharp logo">
-          <span class="text">C#</span>
-        </div>
-        <div class="skill">
-          <img src="images/icons/git.png" alt="Git logo">
-          <span class="text">Git</span>
-        </div>
-        <div class="skill">
-          <img src="images/icons/oop.png" alt="OOP logo">
-          <span class="text">Object Oriented Programming</span>
-        </div>
-        <div class="skill">
-          <img src="images/icons/vfx.png" alt="VFX logo">
-          <span class="text">Shader Graph</span>
-        </div>
-        <div class="skill">
-          <img src="images/icons/lighting.png" alt="Lighting logo">
-          <span class="text">Lighting</span>
-        </div>
-        <div class="skill">
-          <img src="images/icons/design.png" alt="Design logo">
-          <span class="text">Game Design</span>
-        </div>
-        <div class="skill">
-          <img src="images/icons/ui-design.png" alt="UI logo">
-          <span class="text">UI/UX</span>
-        </div>
-        <div class="skill">
-          <img src="images/icons/animation.png" alt="Animation logo">
-          <span class="text">Animation</span>
-        </div>
-        <div class="skill">
-          <img src="images/icons/vr.png" alt="VR logo">
-          <span class="text">VR</span>
-        </div>
+<section id="about"><div class="wrap about-grid">
+  <div class="about-portrait reveal">
+    <div class="portrait-glow"></div>
+    <figure class="about-media">
+      <img src="images/about.png" alt="Liliana Gomez" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="fallback" style="display:none">LG</div>
+      <figcaption><span class="cap-dot"></span>Game Developer · Lighting Artist</figcaption>
+    </figure>
+  </div>
+  <div class="about-text reveal">
+    <span class="eyebrow">About</span>
+    <div class="sec-head" style="margin:12px 0 22px"><h2>I'm Liliana</h2></div>
+    <p>I taught myself programming and Unity, and later completed an <strong>Associate's Degree in Software Development</strong>. I got into the game industry in October 2023, driven by how much I genuinely enjoy making games.</p>
+    <p>Since then, I've been working on <strong>SOPA — Tale of the Stolen Potato</strong> as a Gameplay Developer and Lighting Artist. The game launched in 2025 on Xbox and Steam, and I'm now continuing work on its sequel.</p>
+    <p>These days I use AI tools, including agent-based workflows, to speed up my process, prototype ideas faster, and keep improving how I work.</p>
+    <p>I also come from a <strong>Psychology background</strong>, which really helps me communicate and collaborate with teams. I'm especially interested in games with an educational purpose and those with rich narratives and outstanding artwork.</p>
+    <div class="about-tags">
+      <span class="tag">Narrative</span><span class="tag">Lighting &amp; art</span>
+      <span class="tag">Educational purpose</span><span class="tag">Psychology</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="eyebrow">Projects</span>
+    <h2>Things I've helped build</h2>
+    <p>From a game shipped on consoles to game-jam prototypes and personal projects.</p>
+  </div>
+  <div class="proj-group reveal">
+    <div class="group-label"><h3>Shipped Games</h3><span class="count">01</span><span class="group-rule"></span></div>
+    <article class="featured glass pcard-open" tabindex="0" role="button" aria-label="View SOPA details" data-key="sopa">
+      <div class="featured-media">
+        <img src="images/sopa.png" alt="SOPA — Tale of the Stolen Potato" onerror="this.style.display='none'">
+        <span class="ribbon">Xbox · Steam · PS5</span>
       </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <h2 class="section-title">Contact Me</h2>
-      <div class="contact-container">
-        <div class="contact-info">
-          <a href="https://www.linkedin.com/in/ligomezm/" target="_blank" class="contact-link" data-text="LinkedIn">
-            <img src="images/icons/linkedin.png" alt="LinkedIn Logo" class="contact-logo">
-          </a>
-          <a href="mailto:gomez.liliana333@gmail.com" target="_blank" class="contact-link" data-text="Email">
-            <img src="images/icons/email.png" alt="Email Logo" class="contact-logo">
-          </a>
-          <a href="https://drive.google.com/file/d/1_zrhmWHt9rsYdFwi_IOvAn8o2Eor1IJv/view?usp=sharing" target="_blank"
-            class="contact-link" data-text="Resume">
-            <img src="images/icons/resume.png" alt="Resume Logo" class="contact-logo">
-          </a>
-        </div>
+      <div class="featured-body">
+        <h4>SOPA — Tale of the Stolen Potato</h4>
+        <div class="platforms">Narrative adventure · Magical realism</div>
+        <p class="role-line">Role: <b>Gameplay Developer, Lighting Artist</b></p>
+        <span class="pcard-more">More info
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
       </div>
-    </section>
-  </main>
+    </article>
+  </div>
+  <div class="proj-group reveal">
+    <div class="group-label"><h3>Prototypes &amp; Game Jams</h3><span class="count">04</span><span class="group-rule"></span></div>
+    <div class="card-grid" id="jamGrid"></div>
+  </div>
+  <div class="proj-group reveal">
+    <div class="group-label"><h3>Personal Projects</h3><span class="count">01</span><span class="group-rule"></span></div>
+    <div class="card-grid" id="personalGrid"></div>
+  </div>
+</div></section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2023 by Liliana Gomez</p>
-  </footer>
+<section id="skills"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="eyebrow">Skills</span><h2>What I work with</h2>
+    <p>Tools, disciplines, and territories I explore day to day.</p>
+  </div>
+  <div class="skills-marquee reveal">
+    <div class="marquee-row r1" id="skillsRow1"></div>
+    <div class="marquee-row r2" id="skillsRow2"></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="contact-card glass reveal">
+    <span class="eyebrow" style="justify-content:center;display:flex">Contact</span>
+    <div style="height:14px"></div>
+    <h2>Let's build something together</h2>
+    <p>Always open to projects with narrative, purpose and great art.</p>
+    <div class="contact-links">
+      <a class="clink" href="https://www.linkedin.com/in/ligomezm/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3s-2.3 1.57-2.3 3.2V21H9z"/></svg>LinkedIn
+      </a>
+      <a class="clink" href="mailto:gomez.liliana333@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Email
+      </a>
+      
+      </a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Designed &amp; built with <span class="heart">&hearts;</span> by Liliana Gomez · © 2023–2026</div></footer>
+
+<div class="modal-overlay" id="modal" aria-hidden="true">
+  <div class="modal glass" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-hero" id="mGallery">
+      <div class="gallery-track" id="mTrack"></div>
+      <button class="gallery-nav prev" id="galPrev" aria-label="Previous image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="gallery-nav next" id="galNext" aria-label="Next image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="gallery-dots" id="mDots"></div>
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h3 id="modalTitle"></h3>
+      <div class="modal-field"><div class="k">Description</div><div class="v" id="mDesc"></div></div>
+      <div class="modal-field"><div class="k">Role</div><div class="v" id="mRole"></div></div>
+      <div class="modal-field"><div class="k">Responsibilities</div><ul id="mResp"></ul></div>
+      <div class="modal-links" id="mLinks"></div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/main.js" defer></script>
 </body>
-
 </html>
